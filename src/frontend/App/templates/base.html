@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>{% block title %}Proyecto 3{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}?v={{ timestamp }}">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-links">
+                <a href="{% url 'home' %}">Inicio</a>
+                <a href="{% url 'cargarXml' %}"> Cargar archivo </a>
+                <a href="{% url 'peticiones' %}"> Peticiones </a>
+                <a href="{% url 'ayuda' %}"> Ayuda </a>
+            </div>
+        
+        </nav>
+
+        {% block content %}
+        
+        {% endblock %}
+    </body>
+</html>

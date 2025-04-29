@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+<div>
+    <h1>Proyecto 3</h1>
+</div>    
+<body>
+    <div>
+        <div class="botton-ini">
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="enviar" value="true">
+                <button class="EnviarB">Enviar</button>
+            </form>
+            
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="reset" value="true">
+                <button class="ResetB btn-danger">Reset</button>
+            </form>
+        </div>
+        <div class="columns-container">
+            
+            <div class="column">
+                <h2>Entrada</h2>
+                {% if xml_dataEntrada %}
+                <pre><code>{{ xml_dataEntrada }}</code></pre>
+                {% endif %}
+            </div>
+            <div class="column">
+                <h2>Salida</h2>
+                {% if xml_dataSalida %}
+                <pre><code>{{ xml_dataSalida }}</code></pre>
+                {% endif %}
+            </div>
+        </div>
+        <div>
+            
+            <br>
+        </div>
+    </div>
+    
+</body>
+
+
+{% endblock %}

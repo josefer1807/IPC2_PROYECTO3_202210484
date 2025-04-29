@@ -1,0 +1,9 @@
+frontend
+cd src 
+cd frontend
+python manage.py runserver
+
+Backend 
+cd src 
+cd backendflask 
+flask --app main --debug  run
