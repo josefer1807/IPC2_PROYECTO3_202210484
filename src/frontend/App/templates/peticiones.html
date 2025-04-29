@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Peticiones {% endblock %}
+{% block content %}
+<div>
+    <h1>Peticiones</h1>
+</div>    
+<body>
+    <div>
+        <div class="consultarDatos">
+            <h2>Consultar datos</h2>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" name="consultar_datos">Mostrar datos</button>
+            </form>
+            {% if xml_data_salida %}
+                <pre>{{ xml_data_salida }}</pre>
+            {% endif %}
+        </div>
+        <br>
+        <div class="clasiFecha">
+            <h2>Clasificación por fecha</h2>
+            <button type="submit" name="clasiFechas"> Clasificar por fecha </button>
+        </div>
+        <br>
+        <div class="clasiRangoFecha">
+            <h2>Clasificación por rango de fecha</h2>    
+            <button type="submit" name="clasiRangos"> Clasificar por rangos </button>
+        </div>
+        <br>
+        <div>
+            <h2>Reporte PDF</h2>
+            <form action="http://127.0.0.1:5000/generar_pdf">
+                <button type="submit" class="generarPDF">Generar PDF</button>
+            </form>
+        </div>
+        <br>
+         
+    </div>
+</body>
+
+
+{% endblock %}

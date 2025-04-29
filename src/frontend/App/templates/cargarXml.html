@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} Cargar archivo {% endblock %}
+{% block content %}
+<div>
+    <h1>Cargar archivo</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="xml_file" accept=".xml">
+        <button type="submit">Cargar</button>
+    </form>
+    <div>
+        <div class="columns-container">
+            <div class="column">
+                <h2>Entrada</h2>
+                {% if xml_dataEntrada %}
+                <pre><code>{{ xml_dataEntrada }}</code></pre>
+                {% endif %}
+            </div>
+            <div class="column">
+                <h2>Salida</h2>
+                {% if xml_dataSalida %}
+                <pre>{{ xml_dataSalida }}</pre>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

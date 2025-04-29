@@ -1,0 +1,297 @@
+body{
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    background-color: #d6d6d6;
+
+}
+h1{
+    color:#0a3a49;
+    text-align: left;
+    margin-left: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-weight: 750;
+    font-size: 50px;
+ 
+    border-bottom-style: groove ;
+}
+
+nav{
+    background-color: #1696bd;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    font-weight: 700px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #000;
+    font-size: 15px;
+}
+p{
+    color: #000;
+    font-size: 20px;
+    margin-left: 10px;
+}
+pre{
+    max-width: 600px;
+    overflow: auto;
+}
+li{
+    font-weight: 500;
+    font-size: 17px;
+}
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    font-weight: 700;
+    margin-left: 20px;
+    font-family: "Georgia", "Courier New", serif;
+    color: #000;
+    font-size: 17px;
+    text-decoration: none;
+}
+.nav-buttons {
+    display: flex;
+    margin-left: auto;
+}
+.nav-buttons button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #D96A2E; 
+    color: rgb(0, 0, 0); 
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+.nav-buttons button:hover{
+    background-color: #b1611c;
+}
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    height: 700px;
+}
+.column {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #1696bd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.column h2 {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+}
+.column pre{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.botton-ini{
+    display: flex;
+    margin: 20px;
+    border-radius: 5px;
+    margin-left: auto;
+    
+}
+
+.EnviarB{
+    background-color:#25be46;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.EnviarB:hover{
+    background-color: #1aa321;
+}
+.ResetB{
+    background-color:#b62323;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.ResetB:hover{
+    background-color: #961919;
+}
+
+.palabrasPos h2{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+}
+
+.palabrasNeg h2{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+}
+
+.palabrasX h2{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+}
+.generarPDF{
+
+    background-color: #147434;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}    
+.generarPDF:hover{
+    background-color: #01ac3a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+.consultarDatos pre{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.consultarDatos button{
+    background-color: #147434;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;  
+    cursor: pointer;
+}
+
+.consultarDatos button:hover{
+    background-color: #01ac3a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.clasiRangoFecha button{
+    background-color: #147434;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;  
+    cursor: pointer;
+}
+
+.clasiRangoFecha button:hover{
+    background-color: #01ac3a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.clasiFecha button{
+    background-color: #147434;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;  
+    cursor: pointer;
+}
+
+.clasiFecha button:hover{
+    background-color: #01ac3a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
