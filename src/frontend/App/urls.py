@@ -6,4 +6,6 @@ urlpatterns = [
     path("ayuda", views.ayuda, name="ayuda"),
     path("cargarXml", views.cargarXml, name="cargarXml"),
     path("peticiones", views.peticiones, name="peticiones"),
+    path("resumenIva", views.resumenIva, name="resumenIva"),
+    
 ]

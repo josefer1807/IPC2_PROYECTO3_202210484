@@ -86,3 +86,34 @@ def peticiones(request):
 
 def ayuda(request):
     return render(request, "ayuda.html")
+
+
+def resumenIva(request):
+    resumen_iva_data = None
+    graph_base64 = None
+    error_message = None
+
+    if request.method == "POST":
+        fecha = request.POST.get("fecha")
+        if not fecha:
+            error_message = "Debe especificar una fecha."
+        else:
+            try:
+                # Llamar al endpoint del backend Flask
+                response = requests.post(f'http://127.0.0.1:5000/resumenIva?fecha={fecha}')
+                if response.status_code == 200:
+                    data = response.json()
+                    resumen_iva_data = data.get("data")
+                    graph_base64 = data.get("graph")
+                else:
+                    error_message = response.json().get("message", "Error al obtener el resumen de IVA.")
+            except requests.exceptions.RequestException as e:
+                error_message = f"Error al conectar con el servidor Flask: {str(e)}"
+
+    context = {
+        "resumen_iva_data": resumen_iva_data,
+        "graph_base64": graph_base64,
+        "error_message": error_message,
+    }
+    return render(request, "resumenIva.html", context)
+

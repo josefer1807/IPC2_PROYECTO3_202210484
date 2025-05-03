@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %} Resumen IVA {% endblock %}
+{% block content %}
+<div>
+    <h1>Resumen de IVA</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <button type="submit">Consultar</button>
+    </form>
+
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+
+    {% if resumen_iva_data %}
+        <h2>Datos del Resumen</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>NIT</th>
+                    <th>IVA Emitido</th>
+                    <th>IVA Recibido</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for nit, valores in resumen_iva_data.items %}
+                <tr>
+                    <td>{{ nit }}</td>
+                    <td>{{ valores.emitido }}</td>
+                    <td>{{ valores.recibido }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+
+    {% if graph_base64 %}
+        <h2>Gráfica</h2>
+        <img src="data:image/png;base64,{{ graph_base64 }}" alt="Gráfica de Resumen de IVA">
+    {% endif %}
+</div>
+{% endblock %}

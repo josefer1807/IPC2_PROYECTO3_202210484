@@ -13,6 +13,14 @@
                 <a href="{% url 'cargarXml' %}"> Cargar archivo </a>
                 <a href="{% url 'peticiones' %}"> Peticiones </a>
                 <a href="{% url 'ayuda' %}"> Ayuda </a>
+
+            </div>
+            <div class="nav-button">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="reset" value="true">
+                    <button class="ResetB btn-danger">Reset</button>
+                </form>
             </div>
         
         </nav>
